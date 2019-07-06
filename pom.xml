@@ -6,6 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.21.RELEASE</version>
+		<packaging>war</packaging>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.winkey.demo</groupId>
@@ -36,6 +37,19 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+			    <artifactId>maven-war-plugin</artifactId>
+			    <configuration>
+			        <attachClasses>true</attachClasses>
+			        <webXml>target/web.xml</webXml>
+			        <webResources>
+			            <resource>
+			                <directory>src/main/webapp</directory>
+			                <filtering>true</filtering>
+			            </resource>
+			        </webResources>
+			    </configuration>
 			</plugin>
 		</plugins>
 	</build>
