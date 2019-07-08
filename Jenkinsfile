@@ -3,7 +3,8 @@ node{
     try {
         //def mvn_home 
         stage('check-out'){
-            git 'https://github.com/Win-key/JenkinsDemo.git'
+	     checkout scm
+            //git 'https://github.com/Win-key/JenkinsDemo.git'
             //mvn_home = 'D:/Software/apache-maven-3.6.1-bin/apache-maven-3.6.1'
         }
     
