@@ -30,6 +30,10 @@ node{
         stage('achival'){
                 archiveArtifacts 'target/*.jar'
         }    
+	stage('Deploy to Dev'){
+                input 'Do you want to deploy to DEV ? '
+		bat 'echo Summa sonnen.. Pipilika pillapi... '
+        }
     } catch (e) {
         notify('Job Failed to execute')
         throw e
