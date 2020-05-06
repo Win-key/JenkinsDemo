@@ -32,7 +32,7 @@ node{
         }    
 	stage('Deploy to Dev'){
                 input 'Do you want to deploy to DEV ? '
-		bat 'echo Summa sonnen.. Pipilika pillapi... '
+		bat 'Test'
         }
     } catch (e) {
         notify('Job Failed to execute')
